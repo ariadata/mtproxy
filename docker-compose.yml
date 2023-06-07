@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mtproxy:
+    image: 'ariadata/mtproxy:latest'
+    container_name: ${COMPOSE_PROJECT_NAME}_mtproxy
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - '${MTPROXY_PORT:-443}:443'
+#    volumes:
+#      - /proxy-link.txt:/etc/telegram/proxy-link.txt

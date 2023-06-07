@@ -1,0 +1,19 @@
+#!/bin/sh
+
+cd /etc/telegram/
+curl -s https://core.telegram.org/getProxySecret -o proxy-secret1
+STATUS_SECRET=$?
+if [ $STATUS_SECRET -eq 0 ]; then
+  mv -f proxy-secret1 proxy-secret
+fi
+rm -f proxy-secret1
+
+curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf1
+STATUS_CONF=$?
+if [ $STATUS_CONF -eq 0 ]; then
+  mv -f proxy-multi.conf1 proxy-multi.conf
+fi
+rm -f proxy-multi.conf1
+
+
+kill -9 $(pgrep -f mtproto-proxy)

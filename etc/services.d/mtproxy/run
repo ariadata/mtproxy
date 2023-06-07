@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv sh
+
+#./usr/bin/start_mtproxy.sh
+bash /usr/bin/start_mtproxy.sh
