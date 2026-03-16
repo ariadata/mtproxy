@@ -1,13 +1,12 @@
 # MTProxy with docker-compose
 
-[![Build Status](https://raw.githubusercontent.com/ariadata/ariadata-files/main/public-assets/images/ariadata_logo.png)](https://ariadata.co)
+[![Ariadata](https://raw.githubusercontent.com/ariadata/ariadata-files/main/public-assets/images/ariadata_logo.png)](https://ariadata.co)
 
-![](https://img.shields.io/github/stars/ariadata/mtproxy.svg)
-![](https://img.shields.io/github/watchers/ariadata/mtproxy.svg)
-![](https://img.shields.io/github/forks/ariadata/mtproxy.svg)
-[![License](https://img.shields.io/github/license/ariadata/mtproxy.svg)](https://github.com/ariadata/mtproxy/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/ariadata/mtproxy?style=flat&logo=github)](https://github.com/ariadata/mtproxy/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ariadata/mtproxy?style=flat&logo=github)](https://github.com/ariadata/mtproxy/network/members)
+[![GitHub license](https://img.shields.io/github/license/ariadata/mtproxy?style=flat)](https://github.com/ariadata/mtproxy/blob/main/LICENSE)
 
-### This needs [docker , docker-compose](https://github.com/ariadata/dockerhost-sh) Installed
+### This needs [docker, docker-compose](https://github.com/ariadata/dockerhost-sh) Installed
 
 ---
 
@@ -17,7 +16,7 @@
 git clone -b main https://github.com/ariadata/mtproxy.git && cd mtproxy
 ```
 
-## 2- Copy`env` file from `.env.example`
+## 2- Copy `.env` file from `.env.example`
 
 ```bash
 cp .env.example .env
@@ -43,7 +42,7 @@ echo $(openssl rand -hex 16)
 | `ENABLE_TLS`              | true               | Use fake TLS (recommended)                                      |
 | `TLS_DOMAIN`              | www.cloudflare.com | Domain for fake TLS                                             |
 | `WORKERS`                 | 2                  | Number of worker processes                                      |
-| `MAX_SPECIAL_CONNECTIONS` | 60000              | Max connections                                                 |
+| `MAX_SPECIAL_CONNECTIONS` | 60000              | Max connections                                                |
 | `SECRET`                  | (auto)             | 32-char hex secret(s), comma-separated. Auto-generated if empty |
 | `TAG`                     | (empty)            | 32-char hex tag for Telegram promotion                          |
 
